@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Buku Tamu - Kampus UBS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/form.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/img/logo.png" alt="Logo UBS" class="logo"
+             onerror="this.onerror=null;this.src='https://via.placeholder.com/120x120.png?text=UBS+Logo';"/>
+        <div>
+          <h1>Form Buku Tamu</h1>
+          <p class="tagline">Silakan isi data kunjungan Anda</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a class="active" href="form.html">Form Buku Tamu</a></li>
+          <li><a href="data.html">Data Pengunjung</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <section class="card">
+      <h2>Isi Buku Tamu</h2>
+      <form id="bukuTamuForm" action="hasil.html" method="get" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required />
+          </div>
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input type="number" id="nim" name="nim" placeholder="Contoh: 24011150" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@contoh.com" required />
+          </div>
+          <div class="form-group">
+            <span>Jenis Kelamin</span>
+            <label class="inline"><input type="radio" name="jk" value="Laki-laki" required /> Laki-laki</label>
+            <label class="inline"><input type="radio" name="jk" value="Perempuan" /> Perempuan</label>
+          </div>
+          <div class="form-group">
+            <label for="kepentingan">Kepentingan</label>
+            <select id="kepentingan" name="kepentingan" required>
+              <option value="">-- Pilih Kepentingan --</option>
+              <option>Akademik</option>
+              <option>Keuangan</option>
+              <option>Umum</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="pesan">Kritik & Saran</label>
+            <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Kirim</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Universitas Bani Saleh — Buku Tamu Kampus UBS</p>
+    </div>
+  </footer>
+</body>
+</html>
